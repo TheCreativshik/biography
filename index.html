@@ -8,7 +8,7 @@
         /* Основные стили */
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #FFE4B5, #FFD700);
+            background: linear-gradient(135deg, #E0F7FA, #C8E6C9); /* Приятно-зелёный градиент */
             color: #333;
             margin: 0;
             padding: 0;
@@ -18,10 +18,17 @@
 
         h1 {
             font-size: 3.5em;
-            color: #4CAF50;
+            color: #2E7D32; /* Тёмно-зелёный */
             margin-top: 30px;
             animation: fadeIn 2s ease-in-out, float 4s ease-in-out infinite;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #388E3C; /* Зелёный */
+            margin-top: 20px;
+            animation: slideIn 1.5s ease-in-out;
         }
 
         h3, h4 {
@@ -33,7 +40,7 @@
             display: inline-block;
             padding: 15px 30px;
             margin: 20px;
-            background: linear-gradient(135deg, #4CAF50, #45a049);
+            background: linear-gradient(135deg, #43A047, #2E7D32); /* Зелёный градиент */
             color: white;
             text-align: center;
             text-decoration: none;
@@ -48,7 +55,7 @@
         .button-style:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(135deg, #45a049, #4CAF50);
+            background: linear-gradient(135deg, #2E7D32, #43A047);
         }
 
         img {
@@ -62,7 +69,7 @@
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
         }
 
-        .devices {
+        .section {
             background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             margin: 40px auto;
@@ -75,7 +82,7 @@
         footer {
             margin-top: 60px;
             padding: 20px;
-            background: linear-gradient(135deg, #4CAF50, #45a049);
+            background: linear-gradient(135deg, #43A047, #2E7D32); /* Зелёный градиент */
             color: white;
             font-size: 1.1em;
             animation: fadeIn 3s ease-in-out;
@@ -100,9 +107,9 @@
         }
 
         @keyframes glow {
-            0% { text-shadow: 0 0 5px rgba(76, 175, 80, 0.7); }
-            50% { text-shadow: 0 0 20px rgba(76, 175, 80, 0.9); }
-            100% { text-shadow: 0 0 5px rgba(76, 175, 80, 0.7); }
+            0% { text-shadow: 0 0 5px rgba(46, 125, 50, 0.7); }
+            50% { text-shadow: 0 0 20px rgba(46, 125, 50, 0.9); }
+            100% { text-shadow: 0 0 5px rgba(46, 125, 50, 0.7); }
         }
 
         /* Дополнительные эффекты */
@@ -114,14 +121,14 @@
             animation: float 4s ease-in-out infinite;
         }
 
-        .devices h3 {
+        .section h3 {
             font-size: 1.8em;
-            color: #4CAF50;
+            color: #2E7D32; /* Тёмно-зелёный */
             margin-bottom: 20px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .devices h4 {
+        .section h4 {
             font-size: 1.2em;
             margin: 10px 0;
             color: #666;
@@ -148,28 +155,67 @@
             background: rgba(0, 0, 0, 0.3);
             border-radius: 20px;
         }
+
+        /* Навигация */
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #2E7D32; /* Тёмно-зелёный */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #388E3C; /* Зелёный */
+        }
     </style>
 </head>
 <body>
     <h1 class="floating glow-text">Сайт TheCreativshik'a</h1>
-    <h3>Я Тимофей, 11-ти летний HTML разработчик-самоучка из России, живу в Санкт-Петербурге.</h3> 
-    <h3>Люблю такие игры как War Thunder и Minecraft, отличник.</h3>
-    <a href="https://discord.com/invite/jHHapgdPmB" class="button-style">Мой любимый сервер: Zeffyr</a>
-    <a href="https://t.me/TheCreativshik" class="button-style">Мой Telegram</a>
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#devices">Мои устройства</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+    </nav>
 
-    <!-- Параллакс-эффект без текста -->
+    <div id="about" class="section">
+        <h2>Обо мне</h2>
+        <h3>Я Тимофей, 11-ти летний HTML разработчик-самоучка из России, живу в Санкт-Петербурге.</h3> 
+        <h3>Люблю такие игры как War Thunder и Minecraft, отличник.</h3>
+        <a href="https://discord.com/invite/jHHapgdPmB" class="button-style">Мой любимый сервер: Zeffyr</a>
+        <a href="https://t.me/TheCreativshik" class="button-style">Мой Telegram</a>
+    </div>
+
+    <!-- Параллакс-эффект -->
     <div class="parallax"></div>
 
-    <div class="devices">
-        <h3>Мои устройства:</h3>
-        <h4>Основной телефон: Redmi 13C 8/256</h4>
-        <h4>Экспериментальный телефон: Samsung Galaxy Star Plus 0.5/4</h4>
+    <div id="devices" class="section">
+        <h2>Мои устройства</h2>
+        <h3>Основной телефон: Redmi 13C 8/256</h3>
+        <h3>Экспериментальный телефон: Samsung Galaxy Star Plus 0.5/4</h3>
         <h3>Мой основной ПК:</h3>
         <h4>Процессор: Intel Core i5 3337U</h4>
-        <h4>Видеокарта: NVidia GT 720M</h4>
+        <h4>Видеокарта: GT 710M</h4>
         <h4>ОЗУ: 8 ГБ DDR3</h4>
         <h4>Накопители: SSD 120 ГБ, HDD 1 ТБ</h4>
         <h4>Модель: Asus R510C (AsusTek X510CC)</h4>
+    </div>
+
+    <div id="projects" class="section">
+        <h2>Мои проекты</h2>
+        <h3>Здесь будут мои будущие проекты. Следите за обновлениями!</h3>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Контакты</h2>
+        <h3>Свяжитесь со мной:</h3>
+        <a href="https://t.me/TheCreativshik" class="button-style">Telegram</a>
+        <a href="https://discord.com/invite/jHHapgdPmB" class="button-style">Zeffyr</a>
     </div>
 
     <footer>
